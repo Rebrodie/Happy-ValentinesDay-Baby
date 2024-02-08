@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
+:root {
+  --clr-yes: #f820ff;
+  --clr-no: #ff0000;
+  --clr-back: #faebd7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Poppins;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--clr-back);
+  overflow: hidden;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#messege {
+  display: none;
+  font-size: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+}
+
+.text {
+  display: none;
+  font-size: clamp(4vw, 4rem, 60%);
+  font-weight: 900;
+  margin-bottom: 1em;
+  letter-spacing: calc(7.5 * -0.9);
+  border-right: 5px solid;
+  width: 100%;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  opacity: 0;
+}
+#yes1 {
+  top: 95%;
+  left: 90%;
+}
+#yes2 {
+  top: 95%;
+  left: 10%;
+}
+#quest,
+#love {
+  width: 300px;
+  aspect-ratio: auto;
+}
+button {
+  display: none;
+  opacity: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+span {
+  color: red;
+}
+button#yes {
+  background-color: var(--clr-yes);
+  border: 2px solid var(--clr-yes);
+}
+button#no {
+  background-color: var(--clr-no);
+  border: 2px solid var(--clr-no);
+}
