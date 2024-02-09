@@ -18,7 +18,7 @@ function Animation() {
       },
       ">2"
     )
-    .set(".img", { attr: { src: "/Assets/please.gif" } })
+    .set(".img", { attr: { src: "./Assets/please.gif" } })
     .addLabel("playgif")
     .to(".text", {
       textContent: "I know you have been waiting on me",
@@ -36,7 +36,7 @@ function Animation() {
       },
       ">2"
     )
-    .set(".img", { attr: { src: "/Assets/Hugs.gif" } })
+    .set(".img", { attr: { src: "./Assets/Hugs.gif" } })
     .addLabel("playgif")
     .to(".text", {
       textContent: "And I'm sorry I took so long",
@@ -72,7 +72,7 @@ function Animation() {
       ">2"
     )
 
-    .set(".img", { attr: { src: "/Assets/Hugs3.gif" } })
+    .set(".img", { attr: { src: "./Assets/Hugs3.gif" } })
     .addLabel("playgif")
     .to(".text", {
       textContent: "you are one of the best things",
@@ -106,7 +106,7 @@ function Animation() {
       },
       ">2"
     )
-    .set(".img", { attr: { src: "/Assets/Hugs again.gif" } })
+    .set(".img", { attr: { src: "./Assets/Hugs again.gif" } })
     .addLabel("playgif")
     .to(".text", {
       textContent: "and I am sorry",
@@ -156,7 +156,7 @@ function Animation() {
       },
       ">2"
     )
-    .set(".img", { attr: { src: "/Assets/I love you.gif" } })
+    .set(".img", { attr: { src: "./Assets/I love you.gif" } })
     .addLabel("playgif")
 
     .to(".text", {
@@ -191,7 +191,7 @@ function Animation() {
       },
       ">2"
     )
-    .set(".img", { attr: { src: "/Assets/milk-and-mocha kiss.gif" } })
+    .set(".img", { attr: { src: "./Assets/milk-and-mocha kiss.gif" } })
     .addLabel("playgif")
     .to(".text", {
       textContent: "You are the best girlfriend I could ever ask for",
@@ -209,7 +209,7 @@ function Animation() {
       },
       ">2"
     )
-    .set(".img", { attr: { src: "/Assets/please.gif" } })
+    .set(".img", { attr: { src: "./Assets/please.gif" } })
     .addLabel("playgif")
     .to(".text", {
       textContent: "So please dont ever change",
@@ -227,7 +227,7 @@ function Animation() {
       },
       ">2"
     )
-    .set(".img", { attr: { src: "/Assets/The questions.gif" } })
+    .set(".img", { attr: { src: "./Assets/The questions.gif" } })
     .to(".text", {
       display: "block",
       textContent: "Will you be my Valentines?",
