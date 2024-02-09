@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap");
 :root {
   --clr-yes: #f820ff;
   --clr-no: #ff0000;
@@ -26,56 +26,98 @@ body {
   width: 100%;
   height: 100vh;
 }
-#messege {
-  display: none;
-  font-size: 1rem;
-  position: absolute;
-  left: 50%;
-  top: 0%;
-  transform: translate(-50%, 0%);
+.text-container {
+  .text {
+    display: none;
+    font-size: clamp(4vw, 4rem, 60%);
+    font-weight: 900;
+    margin-bottom: 1em;
+    letter-spacing: calc(7.5 * -0.9);
+    border-right: 5px solid;
+    width: 100%;
+    text-wrap: nowrap;
+    overflow: hidden;
+    span {
+      color: red;
+    }
+  }
+  .img {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
 }
-
-.text {
+.gift-container {
   display: none;
-  font-size: clamp(4vw, 4rem, 60%);
-  font-weight: 900;
-  margin-bottom: 1em;
-  letter-spacing: calc(7.5 * -0.9);
-  border-right: 5px solid;
-  width: 100%;
-  text-wrap: nowrap;
-  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  padding: 1.5rem;
+  gap: 1.2rem;
+  width: min(80%, 450px);
+  background: linear-gradient(to top, #faebd7, #faebd78e);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  > h1 {
+    text-align: center;
+    font-size: clamp(1rem, 0.86rem + 0.64vw, 1.5rem);
+    font-weight: 900;
+    color: #f820ff;
+  }
+  img {
+    width: min(100%, 400px);
+    aspect-ratio: auto;
+  }
+  .gift-body {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    font-weight: 500;
+    text-align: center;
+  }
+  .gift-cost {
+    font-size: clamp(1rem, 0.965rem + 0.16vw, 1.125rem);
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+    color: #f820ff;
+    padding-bottom: 10px;
+    border-bottom: 1px #1817173a solid;
+  }
+  #claim {
+    background-color: #ffeb3a;
+    font-weight: 700;
+    outline: none;
+    width: min(65%, 250px);
+    color: black;
+    margin-top: 10px;
+  }
+}
+.gift-button {
+  display: none;
+  opacity: 0;
+  background: #0de655;
 }
 .buttons {
-  display: flex;
-  flex-direction: row;
+  display: none;
+  opacity: 0;
+  flex-direction: column;
   align-items: center;
   justify-items: center;
   gap: 1rem;
-}
-img {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  opacity: 0;
-}
-#yes1 {
-  top: 95%;
-  left: 90%;
-}
-#yes2 {
-  top: 95%;
-  left: 10%;
-}
-#quest,
-#love {
-  width: 300px;
-  aspect-ratio: auto;
+  z-index: 1;
+  #yes {
+    background-color: var(--clr-yes);
+    border: 2px solid var(--clr-yes);
+  }
+  #no {
+    background-color: var(--clr-no);
+    border: 2px solid var(--clr-no);
+  }
 }
 button {
-  display: none;
-  opacity: 0;
+  outline: none;
+  border: none;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
@@ -85,15 +127,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-span {
-  color: red;
-}
-button#yes {
-  background-color: var(--clr-yes);
-  border: 2px solid var(--clr-yes);
-}
-button#no {
-  background-color: var(--clr-no);
-  border: 2px solid var(--clr-no);
+@media screen and (min-width: 900px) {
+  /* Styles applied when the screen width is at most 900 pixels */
+  .buttons {
+    flex-direction: row; /* Stack elements vertically */
+  }
 }
