@@ -67,7 +67,7 @@ body {
     color: #f820ff;
   }
   img {
-    width: min(100%, 400px);
+    width: min(100%, 250px);
     aspect-ratio: auto;
   }
   .gift-body {
