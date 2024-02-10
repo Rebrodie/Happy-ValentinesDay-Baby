@@ -1,6 +1,11 @@
 function Animation() {
   const tl = gsap.timeline({ defaults: { duration: 1 } });
+  var skip = document.getElementById("skip");
 
+  skip.addEventListener("click", () => {
+    tl.progress(1);
+    console.log("skipped");
+  });
   // Hey Baby
   tl.to(".text", {
     display: "block",
@@ -339,7 +344,7 @@ function answer(ans) {
 function opengift() {
   var tl = gsap.timeline({ defaults: { duration: 1 } });
 
-  tl.to([".text-container", ".gift-button"], { display: "none" }).to(
+  tl.to([".text-container", ".gift-button", "#skip"], { display: "none" }).to(
     ".gift-container",
     {
       opacity: 1,

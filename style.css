@@ -129,6 +129,14 @@ button {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+#skip {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translate(-100%, 0);
+  background: var(--clr-no);
+}
 @media screen and (min-width: 900px) {
   /* Styles applied when the screen width is at most 900 pixels */
   .buttons {
